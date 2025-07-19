@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidate Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            background: white;
+            padding: 20px;
+            margin: auto;
+            width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: #0056b3;
+        }
+        .error-message {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Candidate Details</h2>
+        <form method="POST" action={% url 'submitform' %}>
+            {% csrf_token %}
+            {{form}}
+            
+            {% comment %} <label for="candidate_name">Candidate Name</label>
+            <input type="text" id="candidate_name" name="candidate_name" placeholder="Enter full name">
+
+            <label for="contact">Contact</label>
+            <input type="text" id="contact" name="contact" placeholder="Enter contact number or email">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address">
+
+            {% if error_message %}
+                <p class="error-message">{{ error_message }}</p>
+            {% endif %}
+
+            <label for="expected_ctc">Expected CTC</label>
+            <input type="number" id="expected_ctc" name="expected_ctc" placeholder="Enter expected CTC">
+              {% endcomment %}
+
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if candidate_name and contact %}
+            <div style="margin-top: 20px; background: #e6ffe6; padding: 10px; border: 1px solid #b2ffb2;">
+                <strong>Submitted Information:</strong><br>
+                <strong>Candidate Name:</strong> {{ candidate_name }}<br>
+                <strong>Contact:</strong> {{ contact }}<br>
+                <strong>Email:</strong> {{ email }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
