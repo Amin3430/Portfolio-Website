@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amin Pinjari's Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  {% include "navbar.html" %}
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggle-dark">
+      <span class="slider"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>Amin Pinjari</h1>
+    <p class="typed-text" id="typed-text"></p>
+  </header>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content">
+      <div>
+        <h3>Contact Information</h3>
+        <ul>
+          <li>Email: <a href="mailto:aminp590@gmail.com">aminp590@gmail.com</a></li>
+          <li>Phone: <a href="tel:7720885465">7720885465</a></li>
+          <li>Birthdate: 12-12-2000</li>
+          <li>Location: Shirpur, Maharashtra</li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/amin-pinjari-a69143229" target="_blank">Amin Pinjari</a></li>
+          <li>GitHub: <a href="https://github.com/Amin3430" target="_blank">Amin3430</a></li>
+        </ul>
+      </div>
+    <div class="profile-pic">
+    <img src="{% static 'images/amin.jpg' %}" alt="Amin Pinjari - Profile Picture">
+
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content">
+      <div>
+        <h3>Java Full Stack Course</h3>
+        <p>Firstbit Solution Institute, Pune (2024–2025)</p>
+      </div>
+      <div>
+        <h3>B.Tech Computer Engineering</h3>
+        <p>R.C. Patel Institute of Technology, Shirpur (2019–2023, CGPA: 7.37)</p>
+      </div>
+      <div>
+        <h3>HSC</h3>
+        <p>Dr. P.R. Ghogare College, Shirpur (2018–2019, 74.77%)</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Experience -->
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="content">
+    <div>
+      <h3>Python Developer</h3>
+      <p>
+        <a href="https://flynautsaas.com/" target="_blank">Flynaut SaaS Pvt. Ltd. Pune</a><br>
+        <em>April 2025 – Present</em>
+      </p>
+      <p>Working on scalable Django-based apps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="content">
+    <div>
+      <h3>Languages</h3>
+      <p>Python, Java, MySQL, HTML, CSS, JavaScript</p>
+    </div>
+    <div>
+      <h3>Tools</h3>
+      <p>Visual Studio Code, Jupyter, GitHub</p>
+    </div>
+    <div>
+      <h3>Soft Skills</h3>
+      <p>Leadership, Communication, Self-Motivation</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="content">
+    <div>
+      <h3>Office Employment Management System</h3>
+      <p>Complete solution to manage employee data and roles using Django.</p>
+    </div>
+    <div>
+      <h3>Marksheet Generator System</h3>
+      <p>Web application to generate and export academic marksheets.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications -->
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="content">
+    <div>
+      <h3>Java Full Stack</h3>
+      <p>Firstbit Solution, Pune</p>
+    </div>
+    <div>
+      <h3>OOP in Python and Java</h3>
+      <p>Udemy</p>
+    </div>
+    <div>
+      <h3>Intro to Python</h3>
+      <p>Analytics Vidhya</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Amin Pinjari. All rights reserved.</p>
+    <p>Designed by Amin Pinjari</p>
+  </footer>
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    new Typed('#typed-text', {
+      strings: ['Python Developer'],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
+  <!-- Dark Mode Toggle -->
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+    });
+
+    window.onload = () => {
+      const dark = localStorage.getItem('darkMode') === 'true';
+      document.body.classList.toggle('dark-mode', dark);
+      toggle.checked = dark;
+    };
+  </script>
+</body>
+</html>
