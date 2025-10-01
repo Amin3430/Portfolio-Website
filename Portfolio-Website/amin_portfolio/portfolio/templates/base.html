@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Amin Pinjari's Portfolio - Python Developer{% endblock %}</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Amin Shabbir Pinjari - Python Developer specializing in Django.">
+    <meta name="keywords" content="Python Developer, Django">
+    <meta name="author" content="Amin Shabbir Pinjari">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Amin Pinjari - Python Developer">
+    <meta property="og:description" content="Python Developer specializing in Django web applications">
+    <meta property="og:type" content="website">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

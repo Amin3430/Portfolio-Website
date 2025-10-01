@@ -1,0 +1,232 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  {% include "navbar.html" %}
+
+  <!-- Dark Mode Toggle -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggle-dark">
+      <span class="slider"></span>
+    </label>
+    <span>Dark Mode</span>
+  </div>
+
+  {% include 'header.html' %}
+
+  <!-- Summary -->
+  <section id="summary">
+    <div class="summary">
+      I'm Amin Pinjari, a Python Developer specializing in Django applications. Currently, I'm working as a Development Intern at Zaalima Development, where I optimize Django backends and integrate APIs. With a Computer Engineering background and Full-Stack certification, I'm passionate about creating efficient, scalable solutions that solve real problems. I'm particularly interested in backend development and automation projects where I can make a meaningful impact.
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="content">
+      <div>
+        <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> Email: <a href="mailto:aminp590@gmail.com">aminp590@gmail.com</a></li>
+          <li><i class="fas fa-phone"></i> Phone: <a href="tel:+917720885465">+91 7720885465</a></li>
+          <li><i class="fas fa-map-marker-alt"></i> Location: Shirpur, Maharashtra, India</li>
+          <li><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/amin-pinjari-a69143229" target="_blank">Amin Pinjari</a></li>
+          <li><i class="fab fa-github"></i> GitHub: <a href="https://github.com/Amin3430" target="_blank">Amin3430</a></li>
+        </ul>
+        <h3 style="margin-top: 2rem;"><i class="fas fa-language"></i> Languages</h3>
+        <ul>
+          <li>English</li>
+          <li>Hindi (Native)</li>
+          <li>Marathi</li>
+        </ul>
+      </div>
+      <div class="profile-pic">
+        <img src="{% static 'images/amin.jpg' %}" alt="Amin Pinjari">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="content">
+      <div>
+        <h3><i class="fas fa-university"></i> B.Tech in Computer Engineering</h3>
+        <p><strong>R.C. Patel Institute of Technology, Shirpur</strong></p>
+        <p><i class="fas fa-calendar"></i> 2019 – 2023 | <i class="fas fa-chart-line"></i> CGPA: 7.37</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-code"></i> Python Full Stack Developer Certified</h3>
+        <p><strong>FirstBit Solution, Pune</strong></p>
+        <p><i class="fas fa-calendar"></i> 2024 – 2025</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-school"></i> Higher Secondary Certificate (HSC)</h3>
+        <p><strong>Dr. P.R. Ghogare College, Shirpur</strong></p>
+        <p><i class="fas fa-calendar"></i> 2018 – 2019 | <i class="fas fa-chart-line"></i> Percentage: 74.77%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+    <div class="content">
+      <div>
+        <h3><i class="fas fa-laptop-code"></i> Python Development Intern</h3>
+        <p><strong>Zaalima Development, Bengaluru (Remote)</strong></p>
+        <p><i class="fas fa-calendar"></i> <em>September 2025 – Present</em></p>
+        <p>• Started internship focusing on backend Python development and real-world project contributions.</p>
+        <p>• Working remotely on developing and optimizing Django-based applications.</p>
+        <p>• Collaborating with team members to integrate APIs and maintain code quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+<section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+
+    <!-- Programming Languages -->
+    <div class="skill-card">
+      <h3><i class="fas fa-code"></i> Programming Languages</h3>
+      <div class="skill-tags">
+        <span class="skill-tag strong">Python</span>
+        <span class="skill-tag medium">SQL</span>
+        <span class="skill-tag strong">HTML</span>
+        <span class="skill-tag strong">CSS</span>
+        <span class="skill-tag medium">JavaScript</span>
+      </div>
+    </div>
+
+    <!-- Frameworks & Databases -->
+    <div class="skill-card">
+      <h3><i class="fas fa-layer-group"></i> Frameworks & Databases</h3>
+      <div class="skill-tags">
+        <span class="skill-tag strong">Django</span>
+        <span class="skill-tag medium">REST API</span>
+        <span class="skill-tag medium">MySQL</span>
+        <span class="skill-tag basic">SQLite</span>
+      </div>
+    </div>
+
+    <!-- Development Tools -->
+    <div class="skill-card">
+      <h3><i class="fas fa-tools"></i> Development Tools</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">VS Code</span>
+        <span class="skill-tag">Git/GitHub</span>
+        <span class="skill-tag">MySQL Workbench</span>
+        <span class="skill-tag">MS Office</span>
+      </div>
+    </div>
+
+    <!-- Specializations -->
+    <div class="skill-card">
+      <h3><i class="fas fa-star"></i> Specializations</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Web Development</span>
+        <span class="skill-tag">Database Integration</span>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skill-card">
+      <h3><i class="fas fa-users"></i> Soft Skills</h3>
+      <div class="skill-tags">
+        <span class="skill-tag">Problem Solving</span>
+        <span class="skill-tag">Adaptability</span>
+        <span class="skill-tag">Self-Motivation</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="content">
+      <div class="project-featured">
+        <h3><i class="fas fa-folder-open"></i> File Organizer Automation</h3>
+        <p><strong>Technologies:</strong> Python, Tkinter, OS Module, Shutil, GUI Development</p>
+        <p>• Developed a desktop application with intuitive GUI for automated file organization and management.</p>
+        <p>• Implemented smart file categorization based on file types, creation dates, and custom user rules.</p>
+      </div>
+      
+      <div>
+        <h3><i class="fas fa-users"></i> Office Employment Management System</h3>
+        <p><strong>Technologies:</strong> Python, Django, HTML, CSS, VS Code</p>
+        <p>• Designed full-stack employee portal with secure backend logic and frontend integration.</p>
+        <p>• Implemented CRUD operations, authentication, and role-based access control.</p>
+      </div>
+      
+      <div>
+        <h3><i class="fas fa-certificate"></i> Marksheet Generator System</h3>
+        <p><strong>Technologies:</strong> Python, Django, HTML, CSS, VS Code</p>
+        <p>• Built backend logic in Django for generating academic marksheets with schema migrations.</p>
+        <p>• Ensured code quality with unit and integration tests.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="content">
+      <div>
+        <h3><i class="fas fa-medal"></i> Python Full-Stack Certified</h3>
+        <p><strong>FirstBit Solution, Pune</strong></p>
+        <p><i class="fas fa-calendar"></i> 2024-2025</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-medal"></i> OOP in Python and Java</h3>
+        <p><strong>Udemy</strong></p>
+        <p><i class="fas fa-laptop"></i> Online Course</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-medal"></i> Python using AI Workshop</h3>
+        <p><strong>AI For Techies</strong></p>
+        <p><i class="fas fa-robot"></i> Workshop Certification</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-medal"></i> SQL using AI Workshop</h3>
+        <p><strong>AI For Techies</strong></p>
+        <p><i class="fas fa-database"></i> Workshop Certification</p>
+      </div>
+      <div>
+        <h3><i class="fas fa-medal"></i> Introduction to Python</h3>
+        <p><strong>Analytics Vidhya</strong></p>
+        <p><i class="fas fa-python"></i> Python Fundamentals</p>
+      </div>
+    </div>
+  </section>
+
+  {% include 'footer.html' %}
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+{% endblock %}
+
+{% block extra_js %}
+  <script>
+    // Initialize Typed.js
+    new Typed('#typed-text', {
+      strings: [
+        'Python Developer', 
+        'Django Specialist', 
+        'Full Stack Developer'
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+    });
+  </script>
+{% endblock %}
